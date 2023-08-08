@@ -5,9 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Knight Travails</title>
     <!-- <script src="index.js"></script> -->
-    <script src="index2.js"></script>
+    <script src="index.js"></script>
+    <script src="index_dom.js"></script>
+    <style>
+        .board{
+            width: 30%;
+            padding: 3px;
+            background-color: black;
+            border: 1px solid black;
+            /*  */
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            gap: 3px;
+            
+        }
+        .board > div{
+            text-align: center;
+            width: 30px;
+            height: 30px;
+            padding: 0;
+            margin: 0;
+            background-color: lavenderblush;
+        }
+    </style>
 </head>
 <body>
-    
+    <h1>A simple application of Breadth First Search (BFS)</h1>
+    <h3>This function find the shortest possible path for a knight to travel for start to end location </h3>
+    <p>Enter location from 0,0 to 7,7. Press F12 to see futher</p>
+    <label for="startLoc">Start : </label>
+    <input type="text" id="startLoc" placeholder="0,0" value="0,0">
+    <br>
+    <label for="endLoc">End : </label>
+    <input type="text" id="endLoc" placeholder="1,2" value="1,2">
+    <br>
+    <button id="run">Run</button>
+    <br>
+    <div class="display">
+
+    </div>
+    <br>
+    <hr>
+    <footer>
+        Designed and coded by YC Wong 2023
+    </footer>
 </body>
 </html>
